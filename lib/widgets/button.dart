@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key, required this.label, this.backgroundColor});
+  const MyButton({super.key, required this.label});
 
   final String label;
-  final Color? backgroundColor;
+  // final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,16 @@ class MyButton extends StatelessWidget {
                 borderRadius: BorderRadius.all(
               Radius.circular(12.r),
             )),
-            backgroundColor: defaultColor?? backgroundColor),
+            backgroundColor: defaultColor),
         onPressed: () {},
-        child: Text(label),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16.sp,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
