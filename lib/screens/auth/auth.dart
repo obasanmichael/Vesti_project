@@ -92,7 +92,8 @@ class _AuthScreenState extends State<AuthScreen> {
                                   'Forgot password?',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 14.sp),
+                                      fontSize: 14.sp,
+                                      color: Colors.black),
                                 ))
                           ],
                         )
@@ -151,7 +152,9 @@ class _AuthScreenState extends State<AuthScreen> {
                         child: Text(
                           _isLogin ? 'Register' : 'Login',
                           style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 16.sp),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.sp,
+                              color: Colors.black),
                         ),
                       )
                     ],
