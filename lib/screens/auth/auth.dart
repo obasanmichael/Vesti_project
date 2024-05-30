@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meet_by_vesti/widgets/button.dart';
 import 'package:meet_by_vesti/widgets/outlined_button.dart';
 
@@ -87,7 +88,9 @@ class _AuthScreenState extends State<AuthScreen> {
                             ),
                             Spacer(),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  context.go('/forgot-password');
+                                },
                                 child: Text(
                                   'Forgot password?',
                                   style: TextStyle(

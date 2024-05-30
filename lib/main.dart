@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meet_by_vesti/screens/auth/auth.dart';
+import 'package:meet_by_vesti/screens/forgot_password.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_2.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_screen.dart';
 import 'package:meet_by_vesti/screens/splash_screen.dart';
@@ -31,6 +32,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/auth',
       builder: (BuildContext context, GoRouterState state) => AuthScreen(),
+    ),
+    GoRoute(
+      path: '/forgot-password',
+      builder: (BuildContext context, GoRouterState state) => ForgotPassword(),
     ),
   ],
 );
