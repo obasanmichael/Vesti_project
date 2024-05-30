@@ -16,13 +16,33 @@ class OnBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Spacer(),
         Image(image: AssetImage(image)),
         Spacer(),
-        Text(title),
-        SizedBox(height: 15.h),
-        Text(subtext),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 28.sp,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 15.h),
+              Text(
+                subtext,
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
         Spacer()
       ],
     );

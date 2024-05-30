@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key, required this.label});
+  const MyButton({super.key, required this.label, this.icon, required this.onPressed});
 
+  final Icon? icon;
   final String label;
+  final void Function() onPressed;
   // final Color? backgroundColor;
 
   @override
@@ -14,20 +16,27 @@ class MyButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 21.h),
+            padding: EdgeInsets.symmetric(vertical: 17.h),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
               Radius.circular(12.r),
             )),
             backgroundColor: defaultColor),
-        onPressed: () {},
-        child: Text(
-          label,
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16.sp,
-            color: Colors.white,
-          ),
+        onPressed: onPressed,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (icon != null) icon!,
+            if (icon != null) SizedBox(width: 10.w),
+            Text(
+              label,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 16.sp,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );
