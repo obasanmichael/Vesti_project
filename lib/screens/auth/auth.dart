@@ -71,15 +71,17 @@ class _AuthScreenState extends State<AuthScreen> {
                           children: [
                             Row(
                               children: [
-                                Checkbox(
-                                    value: isChecked,
-                                    activeColor: Color(0xff67A948),
-                                    onChanged: (newBool) {
-                                      setState(() {
-                                        isChecked = newBool;
-                                      });
-                                    }),
-                                addWidth(5),
+                                SizedBox(
+                                  child: Checkbox(
+                                      value: isChecked,
+                                      activeColor: Color(0xff67A948),
+                                      onChanged: (newBool) {
+                                        setState(() {
+                                          isChecked = newBool;
+                                        });
+                                      }),
+                                ),
+                                addWidth(0),
                                 Text('Remember me',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
