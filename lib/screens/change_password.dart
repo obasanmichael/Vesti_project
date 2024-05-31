@@ -11,17 +11,18 @@ class ChangePasswordScreen extends StatefulWidget {
 }
 
 class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
-  Widget build(BuildContext context) {
-    Widget addHeight(double height) => SizedBox(height: height.h);
-    Widget addWidth(double width) => SizedBox(width: width.h);
-    bool? isChecked = false;
+  Widget addHeight(double height) => SizedBox(height: height.h);
+  Widget addWidth(double width) => SizedBox(width: width.h);
+  bool? isChecked = false;
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              context.pop();
+              context.go('/auth');
             },
             icon: Icon(Icons.arrow_back)),
       ),
@@ -78,6 +79,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         Row(
                           children: [
                             SizedBox(
+                              width: 20.w,
+                              height: 20.h,
                               child: Checkbox(
                                 value: isChecked,
                                 activeColor: Color(0xff67A948),
@@ -88,6 +91,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                                 },
                               ),
                             ),
+                            addWidth(5),
                             Text('I agree to Terms and condition')
                           ],
                         ),

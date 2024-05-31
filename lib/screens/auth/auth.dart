@@ -74,6 +74,8 @@ class _AuthScreenState extends State<AuthScreen> {
                               Row(
                                 children: [
                                   SizedBox(
+                                    width: 20.w,
+                                    height: 20.h,
                                     child: Checkbox(
                                       value: isChecked,
                                       activeColor: Color(0xff67A948),
@@ -84,7 +86,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                       },
                                     ),
                                   ),
-                                  addWidth(0),
+                                  addWidth(5),
                                   Text('Remember me',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w600,
@@ -107,19 +109,34 @@ class _AuthScreenState extends State<AuthScreen> {
                           )
                         : Row(
                             children: [
-                              Checkbox(
-                                  value: isChecked,
-                                  activeColor: Color(0xff67A948),
-                                  onChanged: (newBool) {
-                                    setState(() {
-                                      isChecked = newBool;
-                                    });
-                                  }),
-                              Text('I agree to Terms and conditions')
+                              SizedBox(
+                                width: 20.w,
+                                height: 20.h,
+                                child: Checkbox(
+                                    value: isChecked,
+                                    activeColor: Color(0xff67A948),
+                                    onChanged: (newBool) {
+                                      setState(() {
+                                        isChecked = newBool;
+                                      });
+                                    }),
+                              ),
+                              addWidth(5),
+                              Text(
+                                'I agree to Terms and conditions',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14.sp,
+                                ),
+                              )
                             ],
                           ),
                     addHeight(32),
-                    MyButton(label: 'Login with Vesti', onPressed: () {}),
+                    MyButton(
+                        label: 'Login with Vesti',
+                        onPressed: () {
+                          context.go('/home');
+                        }),
                     addHeight(30),
                     const Row(
                       children: [
