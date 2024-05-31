@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
     Widget addHeight(double height) => SizedBox(height: height.h);
     Widget addWidth(double width) => SizedBox(width: width.w);
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 18.w),
@@ -21,13 +22,6 @@ class HomeScreen extends StatelessWidget {
               Container(
                 width: 428.w,
                 height: 600.h,
-                clipBehavior: Clip.antiAlias,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                ),
                 child: Stack(
                   children: [
                     SizedBox(
