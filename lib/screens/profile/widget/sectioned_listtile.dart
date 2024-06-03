@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SectionedListtile extends StatelessWidget {
-  const SectionedListtile({
-    super.key,
-    required this.icon, 
-    required this.title
-  });
+  const SectionedListtile({super.key, required this.icon, required this.title});
 
   final String icon;
   final String title;

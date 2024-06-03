@@ -79,17 +79,21 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             addHeight(36),
-            Expanded(
-              child: ListView.separated(
-                  itemBuilder: (context, index) {
-                    final item = profileSectionItems[index];
-                    return SectionedListtile(
-                        icon: item.image, title: item.title);
-                  },
-                  separatorBuilder: (context, index) {
-                    return Divider();
-                  },
-                  itemCount: profileSectionItems.length),
+            Column(
+              children: [
+                SectionedListtile(
+                    icon: 'assets/images/notify_section.png',
+                    title: 'Notification'),
+                SectionedListtile(
+                    icon: 'assets/images/country.png', title: 'Languages'),
+                SectionedListtile(
+                    icon: 'assets/images/alert_circle.png',
+                    title: 'Help center'),
+                SectionedListtile(
+                    icon: 'assets/images/settings.png', title: 'Settings'),
+                SectionedListtile(
+                    icon: 'assets/images/trash-2.png', title: 'Delete account'),
+              ],
             ),
             ListTile(
               contentPadding: EdgeInsets.all(0),
