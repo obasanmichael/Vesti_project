@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:meet_by_vesti/screens/profile/constants.dart';
 import 'package:meet_by_vesti/screens/profile/widget/profile_app_bar.dart';
 import 'package:meet_by_vesti/screens/profile/widget/sectioned_listtile.dart';
 
