@@ -78,18 +78,30 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             addHeight(36),
-            Column(
+            const Column(
               children: [
                 SectionedListtile(
                     icon: 'assets/images/notify_section.png',
                     title: 'Notification'),
+                Divider(
+                  color: Color(0xffF5F5F5),
+                ),
                 SectionedListtile(
                     icon: 'assets/images/country.png', title: 'Languages'),
+                Divider(
+                  color: Color(0xffF5F5F5),
+                ),
                 SectionedListtile(
                     icon: 'assets/images/alert_circle.png',
                     title: 'Help center'),
+                Divider(
+                  color: Color(0xffF5F5F5),
+                ),
                 SectionedListtile(
                     icon: 'assets/images/settings.png', title: 'Settings'),
+                Divider(
+                  color: Color(0xffF5F5F5),
+                ),
                 SectionedListtile(
                     icon: 'assets/images/trash-2.png', title: 'Delete account'),
               ],
@@ -103,13 +115,14 @@ class ProfileScreen extends StatelessWidget {
                   'assets/images/logout.png',
                 )),
               ),
-              title: Text('Logout'),
-              titleTextStyle: TextStyle(color: Colors.red),
+              title: Text('Log out'),
+              titleTextStyle: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 14.sp),
               subtitle: Text(
                 'Log out the account',
-                style: TextStyle(
-                  color: Color(0xff838383),
-                ),
+                style: TextStyle(color: Color(0xff838383), fontSize: 10.sp),
               ),
             ),
           ],
