@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meet_by_vesti/screens/home/widget/app_bar.dart';
-import 'package:meet_by_vesti/widgets/bottom_navigation_bar.dart';
+import 'package:meet_by_vesti/widgets/filter_container.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  void _openFilterContainer() {
+    showModalBottomSheet(
+      elevation: 0,
+      backgroundColor: Colors.white,
+      isScrollControlled: true,
+      isDismissible: true,
+      context: context,
+      builder: (context) {
+        return Padding(
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          child: const FilterContainer(),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: _openFilterContainer,
                               child: Container(
                                 width: 100.w,
                                 height: 100.w,
@@ -112,7 +134,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 }

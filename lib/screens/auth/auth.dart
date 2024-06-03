@@ -133,9 +133,9 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                     addHeight(32),
                     MyButton(
-                        label: 'Login with Vesti',
+                        label: _isLogin ? 'Login with Vesti' : 'Register',
                         onPressed: () {
-                          context.go('/home');
+                          _isLogin ? context.go('/home') : null;
                         }),
                     addHeight(30),
                     const Row(

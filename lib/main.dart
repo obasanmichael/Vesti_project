@@ -5,10 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:meet_by_vesti/screens/auth/auth.dart';
 import 'package:meet_by_vesti/screens/change_password.dart';
 import 'package:meet_by_vesti/screens/forgot_password.dart';
-import 'package:meet_by_vesti/screens/home/home_screen.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_2.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_screen.dart';
 import 'package:meet_by_vesti/screens/splash_screen.dart';
+import 'package:meet_by_vesti/widgets/bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,16 +37,31 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       path: '/forgot-password',
-      builder: (BuildContext context, GoRouterState state) => ForgotPasswordScreen(),
+      builder: (BuildContext context, GoRouterState state) =>
+          ForgotPasswordScreen(),
     ),
     GoRoute(
       path: '/change-password',
-      builder: (BuildContext context, GoRouterState state) => ChangePasswordScreen(),
+      builder: (BuildContext context, GoRouterState state) =>
+          ChangePasswordScreen(),
     ),
     GoRoute(
       path: '/home',
-      builder: (BuildContext context, GoRouterState state) => HomeScreen(),
+      builder: (BuildContext context, GoRouterState state) =>
+          MyBottomNavigationBar(),
     ),
+    // GoRoute(
+    //   path: '/profile',
+    //   builder: (BuildContext context, GoRouterState state) => ProfileScreen(),
+    // ),
+    // GoRoute(
+    //   path: '/favorites',
+    //   builder: (BuildContext context, GoRouterState state) => FavoritesScreen(),
+    // ),
+    // GoRoute(
+    //   path: '/search',
+    //   builder: (BuildContext context, GoRouterState state) => SearchScreen(),
+    // ),
   ],
 );
 
