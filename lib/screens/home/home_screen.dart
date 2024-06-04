@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meet_by_vesti/screens/home/widget/app_bar.dart';
 import 'package:meet_by_vesti/widgets/filter_container.dart';
 
@@ -105,7 +106,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                context.go('/chat');
+                              },
                               child: Container(
                                 width: 70.w,
                                 height: 70.w,

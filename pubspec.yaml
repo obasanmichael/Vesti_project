@@ -92,6 +92,7 @@ flutter:
     - assets/svg/home_filled.svg
     - assets/svg/user_filled.svg
     - assets/svg/check_mark.svg
+    - assets/svg/navigation.svg
     - assets/images/Up.png
     - assets/images/location_img.png
   #   - images/a_dot_burr.jpeg
