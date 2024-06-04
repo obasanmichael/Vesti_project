@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   void _openFilterContainer() {
     showModalBottomSheet(
+      useSafeArea: true,
       elevation: 0,
       backgroundColor: Colors.white,
       isScrollControlled: true,

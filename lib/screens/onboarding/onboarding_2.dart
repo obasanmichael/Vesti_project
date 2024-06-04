@@ -9,6 +9,7 @@ class FinalOnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const String assetName = 'assets/svg/google.svg';
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 41.h, horizontal: 28.w),
@@ -55,7 +56,7 @@ class FinalOnboardingScreen extends StatelessWidget {
             SizedBox(height: 20.h),
             MyOutlinedButton(
               label: 'Continue with Google',
-              image: 'assets/images/google_icon.png',
+              image: assetName,
             )
           ],
         ),
