@@ -2,7 +2,7 @@ name: meet_by_vesti
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.4.1 <4.0.0'
+  sdk: ">=3.4.1 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,7 +31,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
@@ -40,6 +39,7 @@ dependencies:
   google_fonts: ^6.2.1
   smooth_page_indicator: ^1.1.0
   flutter_svg: ^2.0.10+1
+  flutter_chat_ui: ^1.6.13
 
 dev_dependencies:
   flutter_test:
@@ -57,7 +57,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -65,28 +64,36 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/images/onboarding_img_1.png
-      - assets/images/onboarding_img_2.png
-      - assets/images/onboarding_img_3.png
-      - assets/images/splash_screen_img.png
-      - assets/images/google_icon.png
-      - assets/images/display_img.png
-      - assets/images/notification.png
-      - assets/images/notification_2.png
-      - assets/images/profile.png
-      - assets/images/Controls.png
-      - assets/images/go_icon.png
-      - assets/images/image_card.png
-      - assets/images/notify_section.png
-      - assets/images/logout.png
-      - assets/images/country.png
-      - assets/images/alert_circle.png
-      - assets/images/trash-2.png
-      - assets/images/settings.png
-      - assets/svg/heart.svg
-      - assets/svg/home-2.svg
-      - assets/svg/search.svg
-      - assets/svg/user.svg
+    - assets/images/onboarding_img_1.png
+    - assets/images/onboarding_img_2.png
+    - assets/images/onboarding_img_3.png
+    - assets/images/splash_screen_img.png
+    - assets/images/google_icon.png
+    - assets/images/display_img.png
+    - assets/images/notification.png
+    - assets/images/notification_2.png
+    - assets/images/profile.png
+    - assets/images/Controls.png
+    - assets/images/go_icon.png
+    - assets/images/image_card.png
+    - assets/images/notify_section.png
+    - assets/images/logout.png
+    - assets/images/country.png
+    - assets/images/alert_circle.png
+    - assets/images/trash-2.png
+    - assets/images/settings.png
+    - assets/svg/heart.svg
+    - assets/svg/home-2.svg
+    - assets/svg/search.svg
+    - assets/svg/user.svg
+    - assets/svg/google.svg
+    - assets/svg/Notification.svg
+    - assets/svg/back_arrow.svg
+    - assets/svg/home_filled.svg
+    - assets/svg/user_filled.svg
+    - assets/svg/check_mark.svg
+    - assets/images/Up.png
+    - assets/images/location_img.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

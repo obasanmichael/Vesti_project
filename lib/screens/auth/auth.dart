@@ -14,6 +14,7 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
   Widget addHeight(double height) => SizedBox(height: height.h);
   Widget addWidth(double width) => SizedBox(width: width.h);
+  final String assetName = 'assets/svg/google.svg';
   var _isLogin = true;
   bool? isChecked = false;
 
@@ -156,7 +157,8 @@ class _AuthScreenState extends State<AuthScreen> {
                       ],
                     ),
                     addHeight(30),
-                    MyOutlinedButton(label: 'Continue with Google'),
+                    MyOutlinedButton(
+                        image: assetName, label: 'Continue with Google'),
                     addHeight(16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

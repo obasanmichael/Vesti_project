@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:meet_by_vesti/screens/favorites_screen.dart';
 import 'package:meet_by_vesti/screens/home/home_screen.dart';
 import 'package:meet_by_vesti/screens/profile/profile_screen.dart';
@@ -38,21 +39,33 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: SvgPicture.asset(
+              _selectedIndex == 0
+                  ? 'assets/svg/home_filled.svg'
+                  : 'assets/svg/home-2.svg',
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: SvgPicture.asset(
+              'assets/svg/search.svg',
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline),
+            icon: SvgPicture.asset(
+              'assets/svg/heart.svg',
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: SvgPicture.asset(
+              _selectedIndex == 3
+                  ? 'assets/svg/user_filled.svg'
+                  : 'assets/svg/user.svg',
+            ),
             label: '',
           ),
         ],
