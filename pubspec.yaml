@@ -40,6 +40,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   flutter_svg: ^2.0.10+1
   flutter_chat_ui: ^1.6.13
+  custom_clippers: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +93,7 @@ flutter:
     - assets/svg/home_filled.svg
     - assets/svg/user_filled.svg
     - assets/svg/check_mark.svg
+    - assets/svg/send.svg
     - assets/svg/navigation.svg
     - assets/images/Up.png
     - assets/images/location_img.png
