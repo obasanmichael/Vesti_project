@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meet_by_vesti/screens/auth/auth.dart';
-import 'package:meet_by_vesti/screens/change_password.dart';
+import 'package:meet_by_vesti/screens/auth/change_password.dart';
+import 'package:meet_by_vesti/screens/auth/phone_code.dart';
+import 'package:meet_by_vesti/screens/auth/phone_log_in.dart';
 import 'package:meet_by_vesti/screens/chat/chat_screen.dart';
-import 'package:meet_by_vesti/screens/forgot_password.dart';
+import 'package:meet_by_vesti/screens/auth/forgot_password.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_2.dart';
 import 'package:meet_by_vesti/screens/onboarding/onboarding_screen.dart';
 import 'package:meet_by_vesti/screens/splash_screen.dart';
@@ -33,6 +35,14 @@ final GoRouter _router = GoRouter(
           FinalOnboardingScreen(),
     ),
     GoRoute(
+      path: '/phone_login1',
+      builder: (BuildContext context, GoRouterState state) => PhoneLogIn(),
+    ),
+    GoRoute(
+      path: '/phone_code',
+      builder: (BuildContext context, GoRouterState state) => PhoneCode(),
+    ),
+    GoRoute(
       path: '/auth',
       builder: (BuildContext context, GoRouterState state) => AuthScreen(),
     ),
@@ -53,8 +63,7 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       path: '/chat',
-      builder: (BuildContext context, GoRouterState state) =>
-          ChatScreen(),
+      builder: (BuildContext context, GoRouterState state) => ChatScreen(),
     ),
     // GoRoute(
     //   path: '/profile',

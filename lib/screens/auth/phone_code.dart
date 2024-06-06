@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meet_by_vesti/widgets/button.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({super.key});
+class PhoneCode extends StatelessWidget {
+  const PhoneCode({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              context.pop();
+              context.go('/phone_login1');
             },
             icon: Icon(Icons.arrow_back)),
       ),
@@ -33,31 +34,38 @@ class ForgotPasswordScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Confirm your Email',
+                      'My code is',
                       style: TextStyle(
                           fontWeight: FontWeight.w700, fontSize: 24.sp),
                     ),
-                    addHeight(5),
-                    Text(
-                      'Enter the email associated with your account and we’ll send an email with code to reset your password',
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Color(0xff838383),
+                    addHeight(50),
+                    PinCodeTextField(
+                      appContext: context,
+                      length: 4,
+                      onChanged: (value) {},
+                      pinTheme: PinTheme(
+                        fieldOuterPadding:
+                            EdgeInsets.symmetric(horizontal: 10.w),
+                        shape: PinCodeFieldShape.underline,
+                        fieldHeight: 50.h,
+                        fieldWidth: 76.w,
+                        inactiveColor: Colors.black,
+                        selectedColor: Colors.green,
                       ),
+                      textStyle: TextStyle(
+                        fontSize: 20.sp,
+                        fontFamily: 'Söhne',
+                        fontWeight: FontWeight.bold,
+                      ),
+                      keyboardType: TextInputType.number,
                     ),
-                    addHeight(64),
-                    TextField(
-                      decoration: InputDecoration(
-                          labelText: 'Email',
-                          hintText: 'Enter your Email',
-                          labelStyle: TextStyle(color: Color(0xff838383))),
-                    ),
-                    addHeight(32),
+                    addHeight(35),
                     MyButton(
-                        label: 'Send Code',
-                        onPressed: () {
-                          context.go('/change-password');
-                        })
+                      label: 'Continue',
+                      onPressed: () {
+                        context.go('/auth');
+                      },
+                    )
                   ],
                 ),
               ),

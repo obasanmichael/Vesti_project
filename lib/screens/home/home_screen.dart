@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meet_by_vesti/screens/home/widget/app_bar.dart';
 import 'package:meet_by_vesti/widgets/filter_container.dart';
@@ -49,14 +50,50 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 660.h,
                     width: double.infinity,
                   ),
-                  SizedBox(
-                    height: 616.h,
-                    width: double.infinity,
-                    child: Image(
-                      image: AssetImage('assets/images/display_img.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 28.w, vertical: 24.h),
+                      height: 616.h,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/display_img.png'),
+                              fit: BoxFit.fill)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              SvgPicture.asset('assets/svg/location.svg'),
+                              Spacer(),
+                              Icon(Icons.more_horiz, color: Colors.white)
+                            ],
+                          ),
+                          Spacer(),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Ashely, 21',
+                                style: TextStyle(
+                                    fontSize: 30.sp,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w800),
+                              ),
+                              addHeight(5),
+                              Text(
+                                'Model',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16.sp),
+                              ),
+                            ],
+                          ),
+                          addHeight(62)
+                        ],
+                      )),
                   Positioned(
                     bottom: -17.h,
                     left: 65.w,

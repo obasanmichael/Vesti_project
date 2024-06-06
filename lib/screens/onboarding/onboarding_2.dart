@@ -46,7 +46,7 @@ class FinalOnboardingScreen extends StatelessWidget {
             SizedBox(height: 40.h),
             MyButton(
                 onPressed: () {
-                  context.go('/auth');
+                  context.go('/phone_login1');
                 },
                 icon: Icon(
                   Icons.phone_android_outlined,
@@ -55,6 +55,9 @@ class FinalOnboardingScreen extends StatelessWidget {
                 label: 'Continue with Mobile Number'),
             SizedBox(height: 20.h),
             MyOutlinedButton(
+              onPressed: () {
+                context.go('/auth');
+              },
               label: 'Continue with Google',
               image: assetName,
             )

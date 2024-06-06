@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyOutlinedButton extends StatelessWidget {
-  const MyOutlinedButton({super.key, required this.label, this.image});
+  const MyOutlinedButton({super.key, required this.label, this.image, this.onPressed});
 
   final String? image;
   final String label;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class MyOutlinedButton extends StatelessWidget {
                 Radius.circular(12.r),
               )),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [

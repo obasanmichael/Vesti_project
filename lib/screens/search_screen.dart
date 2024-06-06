@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meet_by_vesti/widgets/image_card.dart';
 import 'package:meet_by_vesti/widgets/info_container/info_container.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -55,29 +56,24 @@ class SearchScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 18.w),
-        child: SingleChildScrollView(
-          child: GridView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 25.0,
-              mainAxisSpacing: 25.0,
-              childAspectRatio: 0.75, // Adjust aspect ratio as needed
-            ),
-            itemCount: 6,
-            itemBuilder: (context, index) {
-              // Replace this return statement with your card widget
-              return InkWell(
-                onTap: showInfoModalSheet,
-                child: Image.asset(
-                  'assets/images/image_card.png',
-                  fit: BoxFit.cover,
-                ),
-              );
-            },
+        padding:
+            EdgeInsets.only(top: 10.h, left: 18.w, right: 18.w, bottom: 20.h),
+        child: GridView.builder(
+          shrinkWrap: true,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 25.0,
+            mainAxisSpacing: 25.0,
+            childAspectRatio: 0.75, 
           ),
+          itemCount: 6,
+          itemBuilder: (context, index) {
+           
+            return InkWell(
+              onTap: showInfoModalSheet,
+              child: ImageCard(),
+            );
+          },
         ),
       ),
     );

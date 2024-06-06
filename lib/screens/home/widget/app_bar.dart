@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
@@ -38,18 +39,13 @@ class MyAppBar extends StatelessWidget {
         ),
         Spacer(),
         IconButton(
-          padding: EdgeInsets.all(0),
-          onPressed: () {},
-          icon: Image(
-            image: AssetImage('assets/images/notification_2.png'),
-            width: 70.w,
-          ),
-        ),
+            padding: EdgeInsets.all(0),
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/svg/notification_2.svg',
+              width: 50.w,
+            )),
       ],
     );
   }
 }
-
-
-
-
