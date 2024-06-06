@@ -43,96 +43,96 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               MyAppBar(),
               addHeight(40),
-              Container(
-                width: 428.w,
-                height: 600.h,
-                child: Stack(
-                  children: [
-                    SizedBox(
-                      height: 616.h,
-                      width: double.infinity,
-                      child: Image(
-                        image: AssetImage('assets/images/display_img.png'),
-                        fit: BoxFit.fill,
+              Stack(
+                children: [
+                  Container(
+                    height: 660.h,
+                    width: double.infinity,
+                  ),
+                  SizedBox(
+                    height: 616.h,
+                    width: double.infinity,
+                    child: Image(
+                      image: AssetImage('assets/images/display_img.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -15.h,
+                    left: 65.w,
+                    right: 65.w,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              width: 70.w,
+                              height: 70.w,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                  ),
+                                ],
+                              ),
+                              child: Icon(Icons.close,
+                                  color: Colors.red, size: 40.w),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: _openFilterContainer,
+                            child: Container(
+                              width: 100.w,
+                              height: 100.w,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                  ),
+                                ],
+                              ),
+                              child: Icon(Icons.favorite,
+                                  color: Colors.pink.shade100, size: 40.w),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              context.go('/chat');
+                            },
+                            child: Container(
+                              width: 70.w,
+                              height: 70.w,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                  ),
+                                ],
+                              ),
+                              child: Icon(Icons.star,
+                                  color: Colors.blue.shade300, size: 40.w),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Positioned(
-                      bottom: -70,
-                      left: 65.w,
-                      right: 65.w,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 20.h),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                width: 70.w,
-                                height: 70.w,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black26,
-                                      spreadRadius: 1,
-                                      blurRadius: 10,
-                                    ),
-                                  ],
-                                ),
-                                child: Icon(Icons.close,
-                                    color: Colors.red, size: 40.w),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: _openFilterContainer,
-                              child: Container(
-                                width: 100.w,
-                                height: 100.w,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black26,
-                                      spreadRadius: 1,
-                                      blurRadius: 10,
-                                    ),
-                                  ],
-                                ),
-                                child: Icon(Icons.favorite,
-                                    color: Colors.pink.shade100, size: 40.w),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                context.go('/chat');
-                              },
-                              child: Container(
-                                width: 70.w,
-                                height: 70.w,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black26,
-                                      spreadRadius: 1,
-                                      blurRadius: 10,
-                                    ),
-                                  ],
-                                ),
-                                child: Icon(Icons.star,
-                                    color: Colors.blue.shade300, size: 40.w),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ],
           ),
