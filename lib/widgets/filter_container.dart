@@ -38,7 +38,10 @@ class _FilterContainerState extends State<FilterContainer> {
                 Spacer(),
                 IconButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    FocusScope.of(context).unfocus();
+                    Future.delayed(Duration(milliseconds: 200), () {
+                      Navigator.pop(context);
+                    });
                   },
                   icon: Icon(Icons.close),
                 ),

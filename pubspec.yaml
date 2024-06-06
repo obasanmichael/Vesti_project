@@ -41,6 +41,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_chat_ui: ^1.6.13
   custom_clippers: ^2.0.0
+  emoji_picker_flutter: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -95,8 +96,10 @@ flutter:
     - assets/svg/check_mark.svg
     - assets/svg/send.svg
     - assets/svg/navigation.svg
+    - assets/svg/file_icon.svg
     - assets/images/Up.png
     - assets/images/location_img.png
+    - assets/images/profile_pic.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

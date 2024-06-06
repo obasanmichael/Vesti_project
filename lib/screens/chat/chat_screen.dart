@@ -12,6 +12,8 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  Widget addHeight(double height) => SizedBox(height: height.h);
+  Widget addWidth(double width) => SizedBox(width: width.h);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +23,54 @@ class _ChatScreenState extends State<ChatScreen> {
         child: Padding(
           padding: EdgeInsets.only(top: 5),
           child: AppBar(
-            elevation: 0,
-            scrolledUnderElevation: 0,
+            backgroundColor: Colors.white,
+            titleSpacing: 0,
+            elevation: 1,
+            scrolledUnderElevation: 1,
             leading: IconButton(
                 onPressed: () {
-                  context.go('/home');
+                  FocusScope.of(context).unfocus();
+                  Future.delayed(Duration(milliseconds: 100), () {
+                    context.go('/home');
+                  });
                 },
                 icon: Icon(Icons.arrow_back_ios_new_rounded)),
-            title: Text('lol'),
+            title: Row(
+              children: [
+                SizedBox(
+                  width: 60.w,
+                  child: CircleAvatar(
+                    child: Image(
+                      image: AssetImage('assets/images/profile_pic.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                addWidth(4),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Janes Cooper',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w700, fontSize: 16.sp),
+                    ),
+                    addHeight(2),
+                    Text(
+                      'Active now',
+                      style:
+                          TextStyle(color: Color(0xff838383), fontSize: 16.sp),
+                    )
+                  ],
+                )
+              ],
+            ),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.more_horiz),
+                onPressed: () {},
+              ),
+            ],
           ),
         ),
       ),
