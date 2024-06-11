@@ -49,6 +49,7 @@ class PhoneCode extends StatelessWidget {
                         shape: PinCodeFieldShape.underline,
                         fieldHeight: 50.h,
                         fieldWidth: 76.w,
+                        activeColor: Colors.black,
                         inactiveColor: Colors.black,
                         selectedColor: Colors.green,
                       ),
