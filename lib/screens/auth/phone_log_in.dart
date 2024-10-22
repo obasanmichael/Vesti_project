@@ -25,7 +25,6 @@ class _PhoneLogInState extends State<PhoneLogIn> {
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              context.go('/onboarding_2');
             },
             icon: Icon(Icons.arrow_back)),
       ),
